@@ -1,0 +1,35 @@
+.main{
+  display: flex;
+  justify-content:space-evenly;
+  margin: 1%;
+}
+.Tags_addTags{
+  width: 40%;
+   border:1px solid black;
+   margin:3px 
+}
+.TagsList{
+  display: grid;
+  justify-items: center;
+}
+.SaveBtn{
+  background-color: aqua;
+  display: block;
+  margin: 4px;
+}
+input{
+  text-align: center;
+}
+form label{
+  font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+  .main{
+    flex-wrap: wrap
+  }
+  .Tags_addTags{
+    width: 100%;
+  }
+  
+}
