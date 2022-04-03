@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import style from "./tagslist.module.css";
 
-function TagsList({ Tags, setTags }) {
+function TagsList({ Tags, setTags, data,setdata }) {
   const [flage, setflage] = useState(false);
   const [newName, setnewName] = useState("");
   const [clickedName, setclickedName] = useState("")
@@ -9,15 +9,21 @@ function TagsList({ Tags, setTags }) {
 
   const handeleDelete = (name) => {
     let temp = [...Tags];
+    let tempArrOfPicturs;
+    let tempData;
     if (window.confirm("do you sure you want to delete?")) {
       for (let index = 0; index < temp.length; index++) {
         if (temp[index].name === name) {
+          tempArrOfPicturs = temp[index].arr
           temp.splice(index, 1);
           break;
         }
       }
+      tempData = [...data,...tempArrOfPicturs]
       localStorage.setItem("Tags", JSON.stringify(temp));
+      localStorage.setItem("data",JSON.stringify(tempData))
       setTags(temp);
+      setdata(tempData)
     }
   };
 

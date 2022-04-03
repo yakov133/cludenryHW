@@ -81,7 +81,7 @@ function App() {
           />
         </form>
 
-        <TagsList Tags={Tags} setTags={setTags} />
+        <TagsList Tags={Tags} setTags={setTags} data={data} setdata={setdata} />
       </div>
 
       <div>
