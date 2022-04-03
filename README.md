@@ -10,6 +10,8 @@
 
 In the project directory, you can run:
 
+<p>first npm i </p> 
+<p>And than</p>
 ### `npm start`
 
 Runs the app in the development mode.\
